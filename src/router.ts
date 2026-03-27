@@ -8,10 +8,11 @@ import AppShell from './AppShell.tsx'
 import VocabStudyPage from './VocabStudyPage.tsx'
 import VocabChapterPage from './VocabChapterPage.tsx'
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    Component: AppShell,
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      Component: AppShell,
     children: [
       {
         index: true,
@@ -43,6 +44,8 @@ const router = createBrowserRouter([
       },
     ],
   },
-])
+  ],
+  { basename: '/english' },
+)
 
 export default router
