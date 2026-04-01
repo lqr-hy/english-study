@@ -1,0 +1,95 @@
+@use '../../styles/tokens' as *;
+
+/* ══════════════════════════════════════════════
+   Quiz Mode
+   ══════════════════════════════════════════════ */
+.quiz-options {
+  display: grid;
+  gap: 10px;
+}
+
+.quiz-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 14px 16px;
+  border: 2.5px solid var(--color-border);
+  border-radius: 14px;
+  background: var(--color-surface);
+  cursor: pointer;
+  text-align: left;
+  font-size: 15px;
+  font-family: 'Baloo 2', 'Noto Sans SC', sans-serif;
+  color: var(--color-text-body);
+  box-shadow: var(--shadow-clay-sm);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.quiz-option:hover:not(:disabled) {
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-clay-md);
+}
+
+.quiz-option:active:not(:disabled) {
+  transform: scale(0.98) translateY(0);
+  box-shadow: var(--shadow-clay-press);
+}
+
+.quiz-option.correct {
+  border-color: var(--color-success);
+  background: var(--color-success-light);
+  color: #166534;
+  box-shadow: 0 3px 0 #86EFAC;
+}
+
+.quiz-option.wrong {
+  border-color: var(--color-error);
+  background: var(--color-error-light);
+  color: #991B1B;
+  box-shadow: 0 3px 0 #FCA5A5;
+}
+
+.quiz-option.dimmed {
+  opacity: 0.4;
+}
+
+.quiz-option-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 10px;
+  background: var(--color-primary-light);
+  border: 1.5px solid var(--color-primary-mid);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  flex-shrink: 0;
+}
+
+.quiz-option.correct .quiz-option-num {
+  background: var(--color-success);
+  border-color: var(--color-success);
+  color: #fff;
+}
+
+.quiz-option.wrong .quiz-option-num {
+  background: var(--color-error);
+  border-color: var(--color-error);
+  color: #fff;
+}
+
+.quiz-option-text {
+  flex: 1;
+  line-height: 1.4;
+}
+
+.quiz-score {
+  text-align: center;
+  font-size: 14px;
+  color: var(--color-text-muted);
+}

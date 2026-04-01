@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import './App.css'
+import './MistakesPage.scss'
 import RecordPagination from './features/records/RecordPagination'
 import { getFavoritesPaged } from './features/records/db'
 import type { FavoriteRecord } from './features/records/db'

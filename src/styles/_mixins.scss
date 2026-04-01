@@ -1,0 +1,86 @@
+@use 'tokens' as *;
+
+// ── Mixins ───────────────────────────────────────
+
+@mixin clay-card {
+  border: 2.5px solid $color-border;
+  border-radius: $radius-lg;
+  background: $color-surface;
+  box-shadow: $shadow-clay-md;
+}
+
+@mixin clay-interactive {
+  transition: transform $transition-base, box-shadow $transition-base, border-color $transition-base;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-clay-md;
+    border-color: $color-primary;
+  }
+
+  &:active {
+    transform: translateY(1px);
+    box-shadow: $shadow-clay-press;
+  }
+}
+
+@mixin clay-button-primary {
+  background: $color-primary;
+  color: #fff;
+  border: 2.5px solid $color-primary-dark;
+  box-shadow: $shadow-clay-sm;
+
+  &:hover {
+    background: #4338CA;
+    transform: translateY(-2px);
+    box-shadow: $shadow-clay-md;
+  }
+
+  &:active {
+    transform: translateY(1px);
+    box-shadow: $shadow-clay-press;
+  }
+}
+
+@mixin clay-button-light {
+  background: $color-primary-light;
+  color: $color-primary-dark;
+  border: 2.5px solid $color-border;
+  box-shadow: $shadow-clay-sm;
+
+  &:hover {
+    background: $color-primary-mid;
+    transform: translateY(-2px);
+    box-shadow: $shadow-clay-md;
+  }
+
+  &:active {
+    transform: translateY(1px);
+    box-shadow: $shadow-clay-press;
+  }
+
+  &:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+@mixin focus-ring {
+  &:focus {
+    outline: none;
+    border-color: $color-primary;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+  }
+}
+
+@mixin input-base {
+  border: 2px solid $color-border;
+  border-radius: $radius-sm;
+  background: $color-surface;
+  color: $color-text-body;
+  font-family: $font-base;
+  transition: border-color $transition-base, box-shadow $transition-base;
+  @include focus-ring;
+}

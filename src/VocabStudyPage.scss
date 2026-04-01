@@ -1,0 +1,133 @@
+@use './styles/tokens' as *;
+
+/* ══════════════════════════════════════════════
+   Vocab Progress
+   ══════════════════════════════════════════════ */
+.vocab-progress-wrap {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.vocab-progress-bar {
+  flex: 1;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--color-primary-light);
+  overflow: hidden;
+  border: 1.5px solid var(--color-border);
+}
+
+.vocab-progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  transition: width 0.4s ease;
+}
+
+.vocab-progress-text {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.vocab-chapter-list {
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+@media (max-width: 860px) {
+  .vocab-chapter-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .vocab-chapter-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.vocab-chapter-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 2px solid var(--color-border);
+  border-radius: 14px;
+  background: var(--color-surface);
+  padding: 12px 14px;
+  text-decoration: none;
+  color: var(--color-text-body);
+  box-shadow: var(--shadow-clay-sm);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.vocab-chapter-row:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-clay-md);
+  transform: translateY(-2px);
+}
+
+.vocab-chapter-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.vocab-chapter-info strong {
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--color-primary-dark);
+}
+
+.vocab-chapter-range {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+/* ══════════════════════════════════════════════
+   Vocab Book Select
+   ══════════════════════════════════════════════ */
+.vocab-book-select {
+  height: 38px;
+  border: 2px solid var(--color-border);
+  border-radius: 999px;
+  padding: 0 14px;
+  background: var(--color-surface);
+  color: var(--color-primary-dark);
+  font-size: 14px;
+  font-family: 'Baloo 2', 'Noto Sans SC', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 0 var(--color-border);
+  transition: border-color 180ms ease;
+}
+
+.vocab-book-select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+/* ══════════════════════════════════════════════
+   Responsive
+   ══════════════════════════════════════════════ */
+@media (max-width: 640px) {
+  .vocab-chapter-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .vocab-chapter-range {
+    display: none;
+  }
+}

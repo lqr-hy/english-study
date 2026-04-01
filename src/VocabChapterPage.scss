@@ -1,0 +1,253 @@
+@use './styles/tokens' as *;
+
+/* ══════════════════════════════════════════════
+   Vocab Chapter Page
+   ══════════════════════════════════════════════ */
+.vocab-chapter-page {
+  background: var(--color-surface-2);
+}
+
+.vocab-mode-row {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.vocab-progress-counter {
+  margin-left: auto;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.vocab-word-card {
+  margin-top: 20px;
+  border: 2.5px solid var(--color-border);
+  border-radius: 20px;
+  background: var(--color-surface);
+  padding: 24px;
+  display: grid;
+  gap: 16px;
+  min-height: 200px;
+  box-shadow: var(--shadow-clay-md);
+}
+
+.vocab-word-main {
+  display: grid;
+  gap: 10px;
+  position: relative;
+}
+
+.vocab-word-top-actions {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.vocab-word-name {
+  margin: 0;
+  font-size: clamp(28px, 5vw, 42px);
+  color: var(--color-primary-dark);
+  font-family: Georgia, serif;
+  letter-spacing: 0.02em;
+  padding-right: 76px;
+  font-weight: 700;
+}
+
+.vocab-word-phonetic {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.vocab-audio-btn {
+  align-self: start;
+  margin-top: 4px;
+  width: fit-content;
+  font-size: 14px;
+}
+
+.vocab-reveal-btn {
+  margin-top: 4px;
+  width: fit-content;
+}
+
+.vocab-reveal-area {
+  width: 100%;
+  padding: 20px;
+  border: 2.5px dashed var(--color-border);
+  border-radius: 14px;
+  cursor: pointer;
+  text-align: center;
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  font-family: 'Baloo 2', 'Noto Sans SC', sans-serif;
+  transition: border-color 180ms ease, background 180ms ease;
+}
+
+.vocab-reveal-area:hover {
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.vocab-dict-display {
+  display: grid;
+  gap: 10px;
+}
+
+.vocab-dict-display .dictation-highlight {
+  justify-content: center;
+}
+
+.vocab-dict-hint {
+  margin: 0;
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.vocab-dict-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.vocab-word-trans {
+  border-top: 2px dashed var(--color-border);
+  padding-top: 12px;
+}
+
+.vocab-word-trans p {
+  margin: 4px 0;
+  color: var(--color-text-body);
+  font-size: 15px;
+}
+
+.vocab-dict-prompt {
+  display: grid;
+  gap: 6px;
+}
+
+.vocab-dict-prompt p {
+  margin: 0;
+  font-size: 16px;
+  color: var(--color-primary-dark);
+  font-weight: 700;
+}
+
+.vocab-dict-input-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.vocab-dict-input {
+  flex: 1;
+  min-width: 0;
+  height: 46px;
+  border: 2px solid var(--color-border);
+  border-radius: 12px;
+  padding: 0 14px;
+  font-size: 16px;
+  font-family: 'Baloo 2', 'Noto Sans SC', sans-serif;
+  color: var(--color-text-body);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-clay-sm);
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.vocab-dict-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15), var(--shadow-clay-sm);
+}
+
+.vocab-dict-input.correct {
+  border-color: var(--color-success);
+  background: var(--color-success-light);
+}
+
+.vocab-dict-input.wrong {
+  border-color: var(--color-error);
+  background: var(--color-error-light);
+}
+
+.vocab-dict-feedback {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 12px;
+}
+
+.vocab-dict-feedback.correct {
+  background: var(--color-success-light);
+  color: #166534;
+  border: 1.5px solid #86EFAC;
+}
+
+.vocab-dict-feedback.wrong {
+  background: var(--color-error-light);
+  color: #991B1B;
+  border: 1.5px solid #FCA5A5;
+}
+
+.vocab-nav-row {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.vocab-dot-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex: 1;
+}
+
+.vocab-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+  background: var(--color-surface);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.12s, border-color 0.12s, transform 0.12s;
+}
+
+.vocab-dot.visited {
+  background: var(--color-primary-mid);
+  border-color: var(--color-secondary);
+}
+
+.vocab-dot.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary-dark);
+  transform: scale(1.4);
+}
+
+/* ══════════════════════════════════════════════
+   Vocab Phonetic Small (favorites)
+   ══════════════════════════════════════════════ */
+.vocab-word-phonetic-small {
+  display: flex;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+  font-style: italic;
+}

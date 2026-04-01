@@ -1,0 +1,75 @@
+// Design Tokens — Claymorphism / Education
+// Single source of truth for all design values
+
+// Colors
+$color-primary:       #4F46E5;
+$color-primary-light: #EEF2FF;
+$color-primary-mid:   #C7D2FE;
+$color-primary-dark:  #312E81;
+$color-secondary:     #818CF8;
+$color-cta:           #22C55E;
+$color-cta-light:     #DCFCE7;
+$color-bg:            #EEF2FF;
+$color-surface:       #FFFFFF;
+$color-surface-2:     #F5F7FF;
+$color-text:          #312E81;
+$color-text-muted:    #6366F1;
+$color-text-body:     #1E1B4B;
+$color-border:        #C7D2FE;
+$color-border-strong: #818CF8;
+$color-error:         #EF4444;
+$color-error-light:   #FEF2F2;
+$color-success:       #22C55E;
+$color-success-light: #DCFCE7;
+$color-gold:          #F59E0B;
+$color-gold-light:    #FEF3C7;
+
+// Claymorphism Shadows
+$shadow-clay-sm:    0 2px 0 $color-primary-mid, 0 4px 12px rgba(79, 70, 229, 0.12);
+$shadow-clay-md:    0 4px 0 $color-primary-mid, 0 8px 24px rgba(79, 70, 229, 0.14);
+$shadow-clay-lg:    0 6px 0 #A5B4FC,            0 16px 40px rgba(79, 70, 229, 0.18);
+$shadow-clay-press: 0 1px 0 $color-primary-mid, 0 2px 6px rgba(79, 70, 229, 0.10);
+
+// Typography
+$font-base: 'Baloo 2', 'Noto Sans SC', sans-serif;
+$font-mono: 'Courier New', Consolas, monospace;
+$font-serif: Georgia, serif;
+
+// Radii
+$radius-sm:   10px;
+$radius-md:   14px;
+$radius-lg:   20px;
+$radius-pill: 999px;
+
+// Transitions
+$transition-base:  180ms ease;
+$transition-quick: 150ms ease;
+
+// CSS custom properties (for runtime use)
+:root {
+  --color-primary:       #{$color-primary};
+  --color-primary-light: #{$color-primary-light};
+  --color-primary-mid:   #{$color-primary-mid};
+  --color-primary-dark:  #{$color-primary-dark};
+  --color-secondary:     #{$color-secondary};
+  --color-cta:           #{$color-cta};
+  --color-cta-light:     #{$color-cta-light};
+  --color-bg:            #{$color-bg};
+  --color-surface:       #{$color-surface};
+  --color-surface-2:     #{$color-surface-2};
+  --color-text:          #{$color-text};
+  --color-text-muted:    #{$color-text-muted};
+  --color-text-body:     #{$color-text-body};
+  --color-border:        #{$color-border};
+  --color-border-strong: #{$color-border-strong};
+  --color-error:         #{$color-error};
+  --color-error-light:   #{$color-error-light};
+  --color-success:       #{$color-success};
+  --color-success-light: #{$color-success-light};
+  --color-gold:          #{$color-gold};
+  --color-gold-light:    #{$color-gold-light};
+  --shadow-clay-sm:      #{$shadow-clay-sm};
+  --shadow-clay-md:      #{$shadow-clay-md};
+  --shadow-clay-lg:      #{$shadow-clay-lg};
+  --shadow-clay-press:   #{$shadow-clay-press};
+}

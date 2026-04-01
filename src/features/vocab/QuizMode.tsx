@@ -4,6 +4,7 @@ import { recordWordMistake } from '../records/wordDb'
 import type { VocabModeProps } from './types'
 import { shuffleArray } from './types'
 import PlayIcon from './PlayIcon'
+import './QuizMode.scss'
 
 function QuizMode({ word, words, currentIndex, bookId, chapterId, chapterNum, favoriteMap, playAudio, onToggleFavorite, markVisited, allBookWords }: VocabModeProps & { allBookWords: WordEntry[] }) {
   const [options, setOptions] = useState<WordEntry[]>([])

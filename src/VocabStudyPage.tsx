@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
-import './App.css'
+import './VocabStudyPage.scss'
 import {
   vocabBookMap,
   loadBookWords,

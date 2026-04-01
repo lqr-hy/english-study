@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
-import './App.css'
+import './StudyPage.scss'
 import { allLessons, levelOptions } from './utils/nce'
 import { getLearnedMap } from './utils/progress'
 import type { LearnedMap } from './features/records/db'

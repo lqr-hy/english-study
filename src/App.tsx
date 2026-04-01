@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import './App.css'
+import './App.scss'
 import { vocabBooks } from './utils/vocab'
 
 type Category = {

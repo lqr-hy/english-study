@@ -1,0 +1,113 @@
+@use '../../styles/tokens' as *;
+
+/* ══════════════════════════════════════════════
+   Line Buttons
+   ══════════════════════════════════════════════ */
+.line-play-btn {
+  border: 2px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-primary-dark);
+  border-radius: 12px;
+  min-height: 36px;
+  padding: 0 12px;
+  cursor: pointer;
+  box-shadow: 0 2px 0 var(--color-border);
+  transition: all 180ms ease;
+}
+
+.line-play-btn:hover {
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
+  transform: translateY(-1px);
+}
+
+.line-icon-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  border: 2px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-primary-dark);
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 0 var(--color-border);
+  transition: all 180ms ease;
+}
+
+.line-icon-btn:hover {
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
+  transform: translateY(-1px);
+}
+
+.line-icon-btn svg {
+  display: block;
+  margin-left: 1px;
+}
+
+.line-content-box {
+  display: grid;
+  gap: 4px;
+}
+
+.line-content-box strong {
+  display: block;
+  color: var(--color-primary-dark);
+}
+
+.line-content-box span {
+  display: block;
+  color: var(--color-text-body);
+}
+
+.hide-mode-box {
+  display: grid;
+  gap: 8px;
+}
+
+.dictation-box {
+  border-top: 2px dashed var(--color-border);
+  padding-top: 8px;
+  display: grid;
+  gap: 4px;
+}
+
+.dictation-box.locked {
+  opacity: 0.72;
+}
+
+/* ══════════════════════════════════════════════
+   Line Chinese Row & Audio Button
+   ══════════════════════════════════════════════ */
+.line-chinese-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.line-audio-btn {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 2px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-primary-dark);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 0 var(--color-border);
+  transition: all 150ms ease;
+}
+
+.line-audio-btn:hover {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary-dark);
+  box-shadow: 0 2px 0 var(--color-primary-dark);
+  transform: translateY(-1px);
+}

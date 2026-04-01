@@ -5,6 +5,7 @@ import { recordWordMistake } from '../records/wordDb'
 import type { VocabModeProps } from './types'
 import { shuffleArray, formatTime, normalizeInput, ERROR_PREVIEW_MS, AUTO_ADVANCE_MS } from './types'
 import PlayIcon from './PlayIcon'
+import './ChallengeMode.scss'
 
 type Phase = 'idle' | 'running' | 'done'
 

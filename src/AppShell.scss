@@ -1,0 +1,91 @@
+@use './styles/tokens' as *;
+
+/* ══════════════════════════════════════════════
+   Global Nav
+   ══════════════════════════════════════════════ */
+.global-records-nav {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 30;
+}
+
+.global-records-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.global-nav-toggle {
+  display: none;
+  border: 2px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-primary-dark);
+  border-radius: 999px;
+  min-height: 38px;
+  padding: 0 14px;
+  cursor: pointer;
+  font-family: 'Baloo 2', 'Noto Sans SC', sans-serif;
+  font-weight: 600;
+  box-shadow: var(--shadow-clay-sm);
+}
+
+.global-nav-toggle.active {
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+.global-nav-link {
+  text-decoration: none;
+  border: 2px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-primary-dark);
+  border-radius: 999px;
+  min-height: 38px;
+  padding: 0 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Baloo 2', 'Noto Sans SC', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: var(--shadow-clay-sm);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.global-nav-link:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-clay-md);
+  border-color: var(--color-primary);
+}
+
+.global-nav-link.active {
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
+  box-shadow: 0 3px 0 var(--color-primary), 0 6px 16px rgba(79, 70, 229, 0.15);
+}
+
+/* ══════════════════════════════════════════════
+   Responsive
+   ══════════════════════════════════════════════ */
+@media (max-width: 760px) {
+  .global-records-nav {
+    left: 12px;
+    bottom: calc(env(safe-area-inset-bottom) + 86px);
+  }
+
+  .global-nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .global-records-nav-links {
+    display: none;
+    margin-top: 8px;
+  }
+
+  .global-records-nav-links.open {
+    display: flex;
+  }
+}

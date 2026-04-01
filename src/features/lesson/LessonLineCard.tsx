@@ -3,6 +3,7 @@ import type { SubtitleLine } from '../../utils/nce'
 import HideModeContent from '../../components/lesson/HideModeContent'
 import NormalModeContent from '../../components/lesson/NormalModeContent'
 import DictationModePanel from '../../components/lesson/DictationModePanel'
+import './LessonLineCard.scss'
 
 type ViewMode = 'both' | 'hide' | 'dictation-en' | 'dictation-zh'
 

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
-import './App.css'
+import './LessonPage.scss'
 import { allLessons } from './utils/nce'
 import type { Lesson } from './utils/nce'
 import { markLessonLearned } from './utils/progress'
